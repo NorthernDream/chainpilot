@@ -1,0 +1,53 @@
+/**
+ * Palette —— 对齐 codenest 原始 example(非 DESIGN.md 杜撰的绿灰面板)。
+ * 真相:底=纯墨黑 + 中央绿光晕;面板=半透明白(中性,无绿);文字=纯白+透明度;绿极稀疏只做语义/光晕。
+ */
+:root {
+  /* —— base [LOCKED from codenest] —— */
+  --bg: #070b0a; /* 墨黑底 */
+  --accent: #5ed29c; /* 薄荷绿:只做强调/语义,一屏≤2~3 处 */
+  --accent-deep: #1f7a5a; /* 仅光晕渐变 */
+
+  /* —— 文字:纯白 + 透明度(codenest 手法,高对比) —— */
+  --text: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.7);
+  --text-faint: rgba(255, 255, 255, 0.45);
+  --hairline: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.08);
+
+  /* —— 面板:半透明白玻璃(中性),背景 BgScene 绿光晕透上来 —— */
+  --surface-1: rgba(255, 255, 255, 0.03);
+  --surface-2: rgba(255, 255, 255, 0.05);
+  --surface-3: rgba(255, 255, 255, 0.08);
+
+  /* —— 安全语义色(稀疏使用) —— */
+  --pass: #5ed29c;
+  --pass-bg: rgba(94, 210, 156, 0.1);
+  --deny: #ff5c5c;
+  --deny-bg: rgba(255, 92, 92, 0.13);
+  --warn: #f5c14e;
+  --warn-bg: rgba(245, 193, 78, 0.12);
+  --freeze: #6db5ff;
+  --freeze-bg: rgba(109, 181, 255, 0.12);
+
+  /* —— typography —— */
+  --font-ui: 'Inter', -apple-system, system-ui, sans-serif;
+  --font-label: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* —— 形状 —— */
+  --radius-card: 14px;
+  --radius-btn: 10px;
+  --radius-pill: 999px;
+  --radius-input: 10px;
+
+  /* —— 间距 —— */
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 40px;
+  --s-7: 64px;
+}

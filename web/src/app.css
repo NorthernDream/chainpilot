@@ -1,0 +1,119 @@
+.app {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.app__header {
+  position: relative;
+  flex-shrink: 0;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  gap: var(--s-5);
+  padding: 0 var(--s-5);
+  border-bottom: 1px solid var(--hairline);
+}
+
+.app__brand {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.app__logo {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+.app__logo-accent {
+  color: var(--accent);
+}
+.app__tagline {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.app__guard {
+  position: relative;
+}
+.app__guard-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--hairline);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+}
+.app__guard-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-pill);
+  background: var(--accent);
+}
+
+.app__right {
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+}
+
+.app__conn {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+.app__conn-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--text-faint);
+  transition: background 200ms ease;
+}
+.app__conn-dot.is-on {
+  background: var(--accent);
+}
+.app__conn-txt {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.app__demo-flag {
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+  font-size: 11px;
+  font-family: var(--font-label);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--warn);
+  background: var(--warn-bg);
+  border: 1px solid rgba(245, 193, 78, 0.3);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  backdrop-filter: blur(6px);
+}
+
+@media (max-width: 720px) {
+  .app__header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: var(--s-3) var(--s-4);
+    gap: var(--s-3);
+  }
+  .app__tagline {
+    display: none;
+  }
+  .app__guard {
+    display: none;
+  }
+}

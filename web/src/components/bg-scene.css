@@ -1,0 +1,57 @@
+/* 真背景:固定满屏,沉在 .app(z-index:1)之下;.app 透明,glow 在顶部/空隙透出 */
+.bgscene {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.bgscene__glow {
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.8;
+}
+
+/* 第二层底部冷光,增加氛围纵深 */
+.bgscene__halo {
+  position: absolute;
+  left: 50%;
+  bottom: -20%;
+  transform: translateX(-50%);
+  width: 1200px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(94, 210, 156, 0.1), transparent 70%);
+  filter: blur(40px);
+}
+
+.bgscene__grid {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+@media (min-width: 900px) {
+  .bgscene__grid {
+    display: block;
+  }
+}
+.bgscene__grid span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.04);
+}
+.bgscene__grid span:nth-child(1) {
+  left: 25%;
+}
+.bgscene__grid span:nth-child(2) {
+  left: 50%;
+}
+.bgscene__grid span:nth-child(3) {
+  left: 75%;
+}

@@ -1,0 +1,24 @@
+# secrets — CAW credentials, never commit
+.env
+.env.local
+*.key
+.cobo-agentic-wallet/
+
+# deps / build
+node_modules/
+.next/
+dist/
+out/
+build/
+
+# scratch
+.scratch/
+.codegraph/
+.claude/
+
+# logs / os
+*.log
+.DS_Store
+
+# 队友内部交接文档,不进提交
+docs/HANDOFF.md

@@ -1,0 +1,28 @@
+{
+  "name": "chainpilot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "链上自动化的安全执行层 — agent 帮你执行,CAW 守住边界",
+  "scripts": {
+    "hello": "tsx scripts/hello-world.ts",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsx src/server.ts",
+    "start": "tsx src/server.ts"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@cobo/agentic-wallet": "^0.1.7",
+    "axios": "^1.17.0",
+    "dotenv": "^17.4.2",
+    "ws": "^8.21.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.3",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}

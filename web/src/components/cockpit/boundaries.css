@@ -1,0 +1,99 @@
+.bd {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  padding: var(--s-5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+
+.bd__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bd__budget {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bd__budget-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.bd__budget-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.bd__budget-pct {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+}
+.bd__budget-pct--warn { color: var(--warn); }
+.bd__budget-pct--deny { color: var(--deny); }
+
+.bd__track {
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-3);
+  overflow: hidden;
+}
+.bd__fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width 400ms cubic-bezier(0.16, 1, 0.3, 1), background-color 300ms ease;
+}
+.bd__fill--pass { background: var(--accent); }
+.bd__fill--warn { background: var(--warn); }
+.bd__fill--deny { background: var(--deny); }
+
+.bd__budget-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+.bd__budget-state--warn { color: var(--warn); }
+.bd__budget-state--deny { color: var(--deny); }
+
+.bd__single {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  padding: var(--s-3) 0;
+  border-top: 1px solid var(--hairline);
+  border-bottom: 1px solid var(--hairline);
+}
+.bd__single-label {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.bd__single-val {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+.bd__single-note {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.bd__chips {
+  display: flex;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+}
+.bd__chip {
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--surface-1);
+  border: 1px solid var(--hairline);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}

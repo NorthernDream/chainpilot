@@ -1,0 +1,35 @@
+.ck {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--s-5);
+  padding: var(--s-5) var(--s-5) var(--s-4);
+}
+
+.ck__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.ck__right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  min-height: 0;
+}
+
+.ck__evidence {
+  flex-shrink: 0;
+  padding: 0 var(--s-5) var(--s-5);
+}
+
+@media (max-width: 900px) {
+  .ck {
+    grid-template-columns: 1fr;
+  }
+}
